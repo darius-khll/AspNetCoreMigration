@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace ClassLibraryStandard
 {
-    public class Super
+    public static class Super
     {
         public static string SuperMethod(string s)
         {
@@ -16,9 +16,10 @@ namespace ClassLibraryStandard
 
         }
 
-        public static void AddToDb()
+        private static void AddToDb()
         {
             var rnd = new Random();
+
             using (var db = new MyContext())
             {
                 var text = $"Some number: {rnd.Next(100)}";
@@ -29,7 +30,7 @@ namespace ClassLibraryStandard
             }
         }
 
-        public static List<Post> GetFromDb()
+        private static List<Post> GetFromDb()
         {
             using (var db = new MyContext())
             {

@@ -16,7 +16,7 @@ namespace ClassLibraryStandard
 
         go
     */
-    class MyContext : DbContext
+    public class MyContext : DbContext
     {
         public MyContext()
         {

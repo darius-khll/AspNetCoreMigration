@@ -9,7 +9,7 @@ namespace OwinAspNet.Controllers
         [HttpGet]
         public string Get()
         {
-            return Super.SuperMethod("OWIN");
+            return Super.SuperMethod("OWIN1");
         }
     }
 }
